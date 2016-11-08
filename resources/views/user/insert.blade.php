@@ -9,7 +9,7 @@
 		  <div class="register-box-body">
 		    <p class="login-box-msg">Insert New membership</p>
 
-		    <form method="post" action="/laravel/public/app/user">
+		    <form method="post" action="{{ route('post_insert_user') }}">
 		    <label>Nama</label>
 			<div class="form-group has-feedback {{ $errors->has('name') ? 'has-error' : ''}}">
 			        <input type="text" name="name" class="form-control" value="{{ Request::old('name') }}" placeholder="Name">

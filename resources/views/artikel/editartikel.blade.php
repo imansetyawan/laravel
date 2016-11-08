@@ -15,7 +15,7 @@
             </div>
 
             <div>
-            <form class="" action="/laravel/public/app/artikel/{{$artikel->id}}" method="post">
+            <form class="" action="{{ route('post_update_artikel', ['id' => $artikel->id])}}" method="post">
             <div class="box-body">
               <label>Nama</label>
               <input class="form-control" name="judulartikel" value="{{$artikel->judulartikel}}" type="text" placeholder="Nama Artikel" value="{{ Request::old('judulartikel') }}">

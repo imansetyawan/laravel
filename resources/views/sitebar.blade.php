@@ -18,7 +18,7 @@
         </li>
 
         <li class="treeview">
-          <a href="{{action('UserController@index')}}">
+          <a href="{{ route('index_user') }}">
             <i class="fa fa-user"></i>
             <span> User</span>
           </a>
@@ -45,7 +45,7 @@
         </li>
         
         <li>
-          <a href="{{action('ArtikelController@index')}}">
+          <a href="{{ route('index_artikel') }}">
             <i class="fa fa-th"></i> <span> Artikel</span>
           </a>
         </li>
