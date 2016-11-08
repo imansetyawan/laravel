@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\User;
 use Auth;
 use App\File;
+use Image;
 
 class ProfilController extends Controller
 {
