@@ -12,6 +12,7 @@ use App\Subscriber;
 use App\Http\Requests;
 use Hash, Mail;
 use Input;
+use Image;
 
 class BlogController extends Controller
 {

@@ -11,7 +11,7 @@
             </div>
 
             <div>
-            <form class="" action="/laravel/public/app/indukkategori/{{$indukkategori->id}}" method="post">
+            <form class="" action="{{ route('post_update_indukkategori', ['id' => $indukkategori->id]) }}" method="post">
             <div class="box-body">
               <label>Nama Kategori</label>
               <input class="form-control" name="nama_induk_kategori" value="{{$indukkategori->nama_induk_kategori}}" type="text" placeholder="Nama Induk Kategori" value="{{ Request::old('nama_induk_kategori') }}">

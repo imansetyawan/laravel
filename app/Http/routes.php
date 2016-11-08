@@ -23,6 +23,13 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::put('app/kategori/edit/{id}', 'KategoriController@update')->name('post_update_kategori');
 	Route::delete('app/kategori/delete/{id}', 'KategoriController@destroy')->name('get_delete_kategori');
 
+	Route::get('app/indukkategori', 'IndukController@index')->name('index_indukkategori');
+	Route::get('app/indukkategori/insert', 'IndukController@create')->name('get_insert_indukkategori');
+	Route::post('app/indukkategori/insert', 'IndukController@store')->name('post_insert_indukkategori');
+	Route::get('app/indukkategori/edit/{id}', 'IndukController@edit')->name('get_update_indukkategori');
+	Route::put('app/indukkategori/edit/{id}', 'IndukController@update')->name('post_update_indukkategori');
+	Route::delete('app/indukkategori/delete/{id}', 'IndukController@destroy')->name('get_delete_indukkategori');
+
 	Route::get('app/user', 'UserController@index')->name('index_user');
 	Route::get('app/user/insert', 'UserController@create')->name('get_insert_user');
 	Route::post('app/user/insert', 'UserController@store')->name('post_insert_user');
