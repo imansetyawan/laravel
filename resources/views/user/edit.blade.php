@@ -7,8 +7,8 @@
     <section class="content-header">
 		<div class="register-box">
 		  <div class="register-box-body">
-		    <p class="login-box-msg">Edit membership</p>
-		    <form action="/laravel/public/app/user/{{$user->id}}" method="post">
+		    <p class="login-box-msg">Edit User</p>
+		    <form action="{{ route('post_update_user', ['id' => $user->id])}}" method="post">
 		    <label>Nama</label>
 			<div class="form-group has-feedback {{ $errors->has('name') ? 'has-error' : ''}}">
 			        <input type="text" name="name" value="{{$user->name}}" class="form-control" value="{{ Request::old('name') }}" placeholder="Name">

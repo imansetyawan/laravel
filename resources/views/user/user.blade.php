@@ -26,7 +26,7 @@
                   <h3 class="box-title">User</h3>
 
                   <div class="box-tools">
-                    <a href="{{ action('UserController@create')}}"><button id="add" type="button" class="btn btn btn-success btn-sm">Insert</button></a>
+                    <a href="{{ route('get_insert_user') }}"><button id="add" type="button" class="btn btn btn-success btn-sm">Insert</button></a>
                   </div>
                 </div>
                 <!-- /.box-header -->
@@ -45,9 +45,9 @@
                       <td>{{$user->name}}</td>
                       <td>{{$user->email}}</td>
                       <td>{{$user->role->name}}</td>
-                      <td><a href="/laravel/public/app/user/{{$user->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
+                      <td><a href="{{ route('get_update_user', ['id' => $user->id]) }}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                       
-                      <form id="myform" style="margin-left: 53px; margin-top: -23px;" class="" action="/laravel/public/app/user/{{$user->id}}" method="post">
+                      <form id="myform" style="margin-left: 53px; margin-top: -23px;" class="" action="{{ route('get_delete_user', ['id' => $user->id]) }}" method="post">
                       <input type ="hidden" name="_method" value="delete">
                       <input type="hidden" name="_token" value="{{csrf_token()}}">
                       <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" value="delete" class="btn btn-danger">Delete</button>

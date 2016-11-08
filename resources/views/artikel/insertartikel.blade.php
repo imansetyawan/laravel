@@ -10,7 +10,7 @@
             </div>
 
             <div>
-            <form class="" action="/laravel/public/app/artikel" method="post" enctype="multipart/form-data">
+            <form class="" action="{{ route('post_insert_artikel') }}" method="post" enctype="multipart/form-data">
             <div class="box-body">
               <label>Nama</label>
               <div class="form-group {{ $errors->has('judulartikel') ? 'has-error' : ''}}">
