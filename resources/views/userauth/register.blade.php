@@ -5,7 +5,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Register</p>
 
-     <form role="form" method="post" action="{{url(action('UserController@postRegister'))}}">
+     <form role="form" method="post" action="{{ route('post_register') }}">
       <div class="form-group has-feedback {{ $errors->has('name') ? ' has-error' : '' }}">
         <input type="text" name="name" class="form-control" placeholder="Name" value="{{Request::old('name')}}">
          @if ($errors->has('name'))

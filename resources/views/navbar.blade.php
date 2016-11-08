@@ -216,7 +216,7 @@
              {{ Auth::user()->name }}<span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-            <li><a href="/laravel/public/app/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+            <li><a href="{{ route('get_logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
             </ul>
           </li>
         </ul>

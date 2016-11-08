@@ -10,7 +10,7 @@
                         
                         <article class="post post-grid">
                             <div class="post-thumb">
-                                <a href="blog.html"><img src="{{asset('image/thumb_'.$artikel->image)}}" alt=""></a>
+                                <a href="{{ route('single_artikel', ['slug' => $artikel->slug])  }}"><img src="{{asset('image/thumb_'.$artikel->image)}}" alt=""></a>
 
                                 <a href="{{ route('single_artikel', ['slug' => $artikel->slug])  }}" class="post-thumb-overlay text-center">
                                     <div class="text-uppercase text-center">View Post</div>
@@ -20,7 +20,7 @@
                                 <header class="entry-header text-center text-uppercase">
                                     <h6><a href="{{ url('blog/kategori/'. $artikel->kategori_id)}}"> {{$artikel->kategori->namakategori}}</a></h6>
 
-                                    <h1 class="entry-title"><a href="{{ route('single_artikel', ['slug' => $artikel->slug])  }}">{{$artikel->judulartikel}}</a></h1>
+                                    <h1 class="entry-title"><a href="{{route('single_artikel', ['slug' => $artikel->slug])}}">{{$artikel->judulartikel}}</a></h1>
                                 </header>
                                 
                             </div>
@@ -38,7 +38,7 @@
                     <aside class="widget news-letter">
                         <h3 class="widget-title text-uppercase text-center">Get Newsletter</h3>
 
-                        <form method="post" action="/laravel/public/app/subscriber">
+                        <form method="post" action="{{route('post_insert_subscriber')}}">
                             <input type="email" name="email" placeholder="Your email address">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <input type="submit" value="Subscribe Now"

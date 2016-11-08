@@ -30,7 +30,7 @@
   <div class="login-box-body">
     <p class="login-box-msg">Login Here</p>
 
-     <form role="form" method="POST" action="/laravel/public/login">
+     <form role="form" method="POST" action="{{ route('post_login') }}">
       {{ csrf_field() }}
 
       <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">

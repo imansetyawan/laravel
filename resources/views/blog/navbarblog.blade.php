@@ -11,14 +11,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=""><img src="http://localhost/laravel/dist2/images/logo.png" alt=""></a>
+                <a class="navbar-brand" href=""><img src="{{ url('asset/dist2/images/logo.png')}}" alt=""></a>
             </div>
 
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav text-uppercase">
-                    <li><a href="{{action('BlogController@index')}}">Home </a>
+                    <li><a href="{{ route('get_blog') }}">Home </a>
                     </li>
                     <li class="menu-item-has-children"><a data-toggle="dropdown" class="dropdown-toggle" href="#">Kategori
                         <i class="fa fa-angle-down"></i></a>
@@ -38,7 +38,7 @@
                     </li>
                     <li><a href="#">TRAVEL</a></li>
                     <li><a href="#">ABOUT ME </a></li>
-                    <li><a href="{{action('BlogController@getContact')}}">CONTACT</a></li>
+                    <li><a href="{{ route('get_blog_contact') }}">CONTACT</a></li>
                 </ul>
                 <div class="i_con">
                     <a href="#"><i class="active fa fa-twitter"></i></a>

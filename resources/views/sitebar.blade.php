@@ -6,7 +6,7 @@
       <ul class="sidebar-menu">
         
         <li class="">
-          <a href="{{action('AdminController@index')}}">
+          <a href="{{ route('admin_home') }}">
             <i class="fa fa-dashboard"></i> <span> Home</span>
           </a>
         </li>
@@ -25,7 +25,7 @@
         </li>
 
         <li class="treeview">
-          <a href="{{action('SubscriberController@index')}}">
+          <a href="{{ route('index_subscriber') }}">
             <i class="fa fa-users"></i>
             <span> Subscriber</span>
           </a>
@@ -39,7 +39,7 @@
         </li> 
 
         <li class="">
-          <a href="{{action('KategoriController@index')}}">
+          <a href="{{ route('index_kategori') }}">
             <i class="fa fa-files-o"></i> <span> Kategori</span>
           </a>
         </li>
@@ -51,7 +51,7 @@
         </li>
         
         <li class="">
-          <a href="{{action('ProfilController@index')}}">
+          <a href="{{ route('index_profil') }}">
             <i class="fa fa-files-o"></i> 
             <span> Profil</span>
           </a>

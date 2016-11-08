@@ -11,7 +11,7 @@
             <div class="box-header">
               <h3 class="box-title">Subscriber</h3>
               <div class="box-tools">
-        		  <a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="/laravel/public/app/subs/create" class="btn btn-success btn-lg"> Insert</a>
+        		  <a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="" class="btn btn-success btn-lg"> Insert</a>
    	         </div>
             </div>
             <!-- /.box-header -->
@@ -26,9 +26,9 @@
                 <tr>
                   <td>{{$sub->id}}</td>
                   <td>{{$sub->email}}</td>
-                  <td><a href="/laravel/public/app/subscriber/{{$sub->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
+                  <td><a href="{{ route('get_update_subscriber', ['id' => $sub->id]) }}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                   	  
-                      <form id="myform" style="margin-left: 53px; margin-top: -23px;" class="" action="/laravel/public/app/subscriber/{{$sub->id}}" method="post">
+                      <form id="myform" style="margin-left: 53px; margin-top: -23px;" class="" action="{{ route('get_delete_subscriber', ['id' => $sub->id]) }}" method="post">
                       <input type ="hidden" name="_method" value="delete">
                       <input type="hidden" name="_token" value="{{csrf_token()}}">
                       <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" value="delete" class="btn btn-danger">Delete</button>

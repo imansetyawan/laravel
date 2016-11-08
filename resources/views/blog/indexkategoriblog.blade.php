@@ -3,7 +3,7 @@
                         <ul>
                             @foreach ($kategoris as $kategori)
                             <li>
-                                <a href="{{ url('blog/kategori/'. $kategori->id)}}">{{$kategori->namakategori}}</a>
+                                <a href="{{ route('get_kategori_artikel', ['id' => $kategori->id])}}">{{$kategori->namakategori}}</a>
                                 <span class="post-count pull-right">{{$kategori->artikel_count}}</span>
                             </li>
                             @endforeach

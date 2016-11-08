@@ -49,7 +49,6 @@ class KategoriController extends Controller
         $this->validate($request, [
         'namakategori' => 'required',
         'indukkategori_id' => 'required',
-        'slug'  => 'required|unique:namakategori',
         ]);
 
         $kategori = new Kategori;

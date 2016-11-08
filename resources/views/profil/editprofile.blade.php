@@ -15,7 +15,7 @@
             </div>
 
             <div>
-            <form class="" action="/laravel/public/user/profile/{{$users->id}}" method="post" enctype="multipart/form-data">
+            <form class="" action="{{ route('post_update_profil', ['id' => $users->id])}}" method="post" enctype="multipart/form-data">
             <div class="box-body">
               <div class="nama {{ $errors->has('name') ? 'has-error' : ''}}">
               <label>Nama</label>

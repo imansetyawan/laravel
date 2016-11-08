@@ -15,7 +15,7 @@
             </div>
 
             <div>
-            <form class="" action="/laravel/public/app/kategori/{{$kategori->id}}" method="post">
+            <form class="" action="{{ route('post_update_kategori', ['id' => $kategori->id])}}" method="post">
             <div class="box-body">
               <label>Nama Kategori</label>
               <input class="form-control" name="namakategori" value="{{$kategori->namakategori}}" type="text" placeholder="Nama Kategori" value="{{ Request::old('namakategori') }}">

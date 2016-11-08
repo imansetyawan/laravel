@@ -26,7 +26,7 @@
             <div class="box-header">
               <h3 class="box-title">Kategori</h3>
               <div class="box-tools">
-        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="/laravel/public/app/kategori/create" class="btn btn-success btn-lg"> Insert</a>
+        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="{{ route('get_insert_kategori') }}" class="btn btn-success btn-lg"> Insert</a>
    	         </div>
             </div>
             <!-- /.box-header -->
@@ -44,9 +44,9 @@
                   <td>{{$kategori->id}}</td>
                   <td>{{$kategori->namakategori}}</td>
                   <td>{{$kategori->indukkategori->nama_induk_kategori}}</td>
-                  <td><a href="/laravel/public/app/kategori/{{$kategori->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
+                  <td><a href="{{ route('get_update_kategori', ['id' => $kategori->id]) }}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                   	  
-                      <form id="myform" style="margin-left: 53px; margin-top: -23px;" class="" action="/laravel/public/app/kategori/{{$kategori->id}}" method="post">
+                      <form id="myform" style="margin-left: 53px; margin-top: -23px;" class="" action="{{ route('get_delete_kategori', ['id' => $kategori->id]) }}" method="post">
                       <input type ="hidden" name="_method" value="delete">
                       <input type="hidden" name="_token" value="{{csrf_token()}}">
                       <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" value="delete" class="btn btn-danger">Delete</button>

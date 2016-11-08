@@ -14,7 +14,7 @@
                     <h3 class="text-uppercase">Send massage</h3>
                     <br>
 
-                    <form class="form-horizontal contact-form" role="form" method="post" action="{{url(action('BlogController@postContact'))}}">
+                    <form class="form-horizontal contact-form" role="form" method="post" action="{{ route('post_blog_contact') }}">
                         <div class="form-group">
                             <div class="col-md-12">
                                 <input type="text" class="form-control" name="name"

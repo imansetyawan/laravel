@@ -94,8 +94,9 @@ class ProfilController extends Controller
             $avatar = $request->file('gambar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
             Image::make($avatar)->resize(300, 300)->save( public_path('image/' . $filename) );
-        
-        $users->avatar = $filename;
+            $users->avatar = $filename;
+        }
+
         $users->name = $request->name;
         $users->namalengkap = $request->namalengkap;
         $users->nomorhp = $request->nomorhp;
@@ -104,9 +105,9 @@ class ProfilController extends Controller
         $users->alamatasli = $request->alamatasli;
         $users->alamatmalang = $request->alamatmalang;
         $users->deskripsi = $request->deskripsi;
-    }
+    
         $users->save();
-        return redirect('user/profile');
+        return redirect('app/user/profile');
     }
 
     public function destroy($id)

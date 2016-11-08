@@ -10,7 +10,7 @@
             </div>
 
             <div>
-            <form class="" action="/laravel/public/app/kategori" method="post">
+            <form method="post" action="{{ route('post_insert_kategori') }}">
             <div class="box-body">
               <label>Nama Kategori</label>
               <div class="form-group {{ $errors->has('namakategori') ? 'has-error' : ''}}">

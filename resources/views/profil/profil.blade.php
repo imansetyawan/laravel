@@ -31,7 +31,7 @@
             <div class="box-header">
               <h3 class="box-title">My Profil</h3>
               <div class="box-tools">
-                <a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="/laravel/public/user/profile/{{$users->id}}/edit" class="btn btn-success btn-lg"> Edit</a>
+                <a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="{{ route('get_update_profil', ['id' => $users->id]) }}" class="btn btn-success btn-lg"> Edit</a>
              </div>
             </div>
                     <hr>

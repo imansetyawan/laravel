@@ -10,7 +10,7 @@
             </div>
 
             <div>
-            <form class="" action="/laravel/public/app/subscriber/{{$subs->id}}" method="post">
+            <form class="" action="{{ route('post_update_subscriber', ['id' => $subs->id])}}" method="post">
             <div class="box-body">
               <label>Email</label>
               <input class="form-control" name="email" value="{{$subs->email}}" type="text" placeholder="Email" value="{{ Request::old('email') }}">
